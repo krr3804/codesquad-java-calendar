@@ -15,6 +15,7 @@ public class Sum {
 		int sum = input1 + input2;
 		System.out.println("두 수의 합은 : " + sum);
 		sc.close();
+		
 	}
 	
 }
