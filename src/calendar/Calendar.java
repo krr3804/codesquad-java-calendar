@@ -20,16 +20,22 @@ public class Calendar {
 	
 	public static void main (String [] args) {
 
-	
+	String PROMPT = "<cal> ";
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("반복횟수를 입력하시오:");
-	int repeat = scanner.nextInt();
-	for(int i=0; i< repeat; i++) {
-	Calendar cal = new Calendar();
-	System.out.println("입력받은 달의 최대 일 수를 구하시오 :");
-	int month = scanner.nextInt();
+	int month=1;
 	
-
+	
+	while(true) {
+	Calendar cal = new Calendar();
+	System.out.println("달을 입력하시오:");
+	System.out.print(PROMPT);
+	month = scanner.nextInt();
+	if(month == -1) {
+		break;
+	}
+	if(month > 12)
+		continue;
 	
 	System.out.println(month + "월달은 " + cal.getMaxDaysOfMonth(month) + "일 까지 있습니다.");
 	}
