@@ -22,6 +22,9 @@ public class Calendar {
 
 	
 	Scanner scanner = new Scanner(System.in);
+	System.out.println("반복횟수를 입력하시오:");
+	int repeat = scanner.nextInt();
+	for(int i=0; i< repeat; i++) {
 	Calendar cal = new Calendar();
 	System.out.println("입력받은 달의 최대 일 수를 구하시오 :");
 	int month = scanner.nextInt();
@@ -29,9 +32,10 @@ public class Calendar {
 
 	
 	System.out.println(month + "월달은 " + cal.getMaxDaysOfMonth(month) + "일 까지 있습니다.");
-
-	cal.printSampleCalendar();
-	
+	}
+	//cal.printSampleCalendar();
+	System.out.println("-end-");
+	scanner.close();
 	}	
-	
-}
+}	
+
